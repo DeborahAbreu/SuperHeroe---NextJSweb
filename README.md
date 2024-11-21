@@ -1,36 +1,70 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Superheroes App
 
-## Getting Started
+Este projeto é uma aplicação simples desenvolvida em Next.js que consome dados da API [SuperHeroAPI](https://superheroapi.com/) para exibir informações sobre super-heróis. A aplicação inclui o uso de componentes, estilos globais, fontes personalizadas e carregamento dinâmico de dados.
 
-First, run the development server:
+---
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## Estrutura do Projeto
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+A estrutura principal do projeto é composta pelos seguintes arquivos e funcionalidades:
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+1. **`Home`**:
+   - Carrega e exibe informações de super-heróis utilizando a API.
+   - Gera dinamicamente componentes de cartão (`Card`) para cada super-herói carregado.
+   - Inclui gerenciamento de estado com React Hooks (`useState` e `useEffect`).
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+2. **`RootLayout`**:
+   - Configura estilos globais e fontes personalizadas.
+   - Define a estrutura base da aplicação com `<html>` e `<body>`.
 
-## Learn More
+3. **Estilos**:
+   - Estilização global em `globals.css`.
+   - Estilo específico para o layout desktop no `page.module.css`.
 
-To learn more about Next.js, take a look at the following resources:
+4. **Fontes**:
+   - Fontes customizadas (`GeistSans` e `GeistMono`) são importadas localmente.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+---
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Funcionalidades
 
-## Deploy on Vercel
+- **Carregamento de Dados Dinâmico**:
+  - A aplicação utiliza a função `getHeroes` para buscar dados da API com base em IDs de super-heróis.
+  - O carregamento inicial inclui dois super-heróis (IDs 200 e 465).
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- **Exibição Condicional**:
+  - Enquanto os dados não são carregados, a aplicação exibe um texto de "Carregando...".
+  - Após o carregamento, as informações dos heróis são exibidas em cartões estilizados.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- **Monitoramento do Estado**:
+  - Atualizações no estado dos heróis são registradas no console do navegador para fins de debug.
+
+---
+
+## Tecnologias Utilizadas
+
+- **Next.js**:
+  - Framework React para renderização server-side e geração de páginas estáticas.
+
+- **React**:
+  - Hooks (`useState`, `useEffect`) para gerenciar estado e efeitos colaterais.
+
+- **CSS**:
+  - Estilos globais para reset e layout base.
+
+- **SuperHeroAPI**:
+  - API de terceiros para buscar informações sobre super-heróis.
+
+---
+
+## Como Executar o Projeto
+
+-1. Clone o repositório:
+-2. Instale as dependências: npm install
+-3. Inicie o servidor de desenvolvimento: npm run dev
+-4. Acesse a aplicação no navegador em: http://localhost:3000
+
+
+
+
+
