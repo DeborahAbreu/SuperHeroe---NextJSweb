@@ -1,3 +1,5 @@
+Deborah Jamilly de Abreu Souza - 10420342 
+
 # Superheroes App
 
 Este projeto é uma aplicação simples desenvolvida em Next.js que consome dados da API [SuperHeroAPI](https://superheroapi.com/) para exibir informações sobre super-heróis. A aplicação inclui o uso de componentes, estilos globais, fontes personalizadas e carregamento dinâmico de dados.
