@@ -1,4 +1,5 @@
 Deborah Jamilly de Abreu Souza - 10420342 
+Jean ALex da Silva - 10426728
 
 # Superheroes App
 
